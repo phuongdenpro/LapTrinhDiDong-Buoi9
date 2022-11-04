@@ -2,9 +2,9 @@ import { StatusBar } from "expo-status-bar";
 import { useRef, useState } from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
 import { Button, Image } from "react-native";
-import icon from "./assets/download.jpg";
+import icon from "../assets/download.jpg";
 
-export default function App() {
+const Screen3 = (props) => {
   const [location, setLocation] = useState({
     x: null,
     y: null,
@@ -46,7 +46,11 @@ export default function App() {
       onResponderRelease={onRelease}
       style={styles.container}
     >
-      <Text style={{color:'green', fontSize:15}}>Touch where you need to go!</Text>
+    <View style={{flexDirection:'row', alignItems:'center', marginTop:30, marginLeft:20}}>
+    <Button title="Go Back"  onPress={()=> props.navigation.goBack()}/>
+      <Text style={{color:'green', fontSize:15, marginLeft:30}}>Touch where you need to go!</Text>
+      
+      </View>
 
       <Animated.Image
         source={icon}
@@ -56,8 +60,10 @@ export default function App() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
 });
+export default Screen3;

@@ -2,11 +2,11 @@ import { StatusBar } from "expo-status-bar";
 import { useRef, useState } from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
 import { Button, Image } from "react-native";
-import mouse1 from "./assets/download.jpg";
-import mouse2 from "./assets/Hinh-anh-Jerry-buon-450x600.jpg";
-import mouse3 from "./assets/Anh-Jerry-le-luoi.jpg";
+import mouse1 from "../assets/download2.jpg";
+import mouse2 from "../assets/Hinh-anh-Jerry-buon-450x600.jpg";
+import mouse3 from "../assets/Anh-Jerry-le-luoi.jpg";
 
-export default function App() {
+const Screen2 = (props) => {
   const [location, setLocation] = useState({
     x: null,
     y: null,
@@ -92,9 +92,16 @@ export default function App() {
       onResponderRelease={onRelease}
       style={styles.container}
     >
-      <Text style={{ color: "green", fontSize: 15 }}>
-        Touch everywhere!
-      </Text>
+      <View
+        style={{ flexDirection: "row", alignItems: "center", marginTop: 30, marginLeft:20 }}
+      >
+      <Button
+          title="Go Back"
+          onPress={() => props.navigation.goBack()}
+        />
+        <Text style={{ color: "green", fontSize: 15, marginLeft:30 }}>Touch everywhere!</Text>
+        
+      </View>
 
       <Animated.Image
         source={mouse1}
@@ -143,10 +150,11 @@ export default function App() {
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
 });
+export default Screen2;
