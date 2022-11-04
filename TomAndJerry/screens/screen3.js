@@ -3,9 +3,8 @@ import { useRef, useState } from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
 import { Button, Image } from "react-native";
 import meo1 from "../assets/meo1.jpg";
-import chuot1 from "../assets/chuot1.jpg"
-import chuot2 from "../assets/chuot2.jpg"
-import chuot3 from "../assets/chuot3.png"
+import chuot from "../assets/chuoticon.png"
+
 
 const Screen3 = (props) => {
   const [location, setLocation] = useState({
@@ -60,15 +59,15 @@ const Screen3 = (props) => {
         style={{ marginLeft: marginLeft, marginTop: marginTop, width:150, height:150 }}
       ></Animated.Image>
       <Animated.Image
-        source={chuot1}
+        source={chuot}
         style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
       ></Animated.Image>
       <Animated.Image
-        source={chuot2}
+        source={chuot}
         style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
       ></Animated.Image>
       <Animated.Image
-        source={chuot3}
+        source={chuot}
         style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
       ></Animated.Image>
     </View>
