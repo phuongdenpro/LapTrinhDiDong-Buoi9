@@ -2,7 +2,10 @@ import { StatusBar } from "expo-status-bar";
 import { useRef, useState } from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
 import { Button, Image } from "react-native";
-import icon from "../assets/download.jpg";
+import meo1 from "../assets/meo1.jpg";
+import chuot1 from "../assets/chuot1.jpg"
+import chuot2 from "../assets/chuot2.jpg"
+import chuot3 from "../assets/chuot3.png"
 
 const Screen3 = (props) => {
   const [location, setLocation] = useState({
@@ -53,8 +56,20 @@ const Screen3 = (props) => {
       </View>
 
       <Animated.Image
-        source={icon}
-        style={{ marginLeft: marginLeft, marginTop: marginTop }}
+        source={meo1}
+        style={{ marginLeft: marginLeft, marginTop: marginTop, width:150, height:150 }}
+      ></Animated.Image>
+      <Animated.Image
+        source={chuot1}
+        style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
+      ></Animated.Image>
+      <Animated.Image
+        source={chuot2}
+        style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
+      ></Animated.Image>
+      <Animated.Image
+        source={chuot3}
+        style={{ marginLeft: marginLeft, marginTop: marginTop, width:100, height:100 }}
       ></Animated.Image>
     </View>
   );
